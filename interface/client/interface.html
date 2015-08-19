@@ -1,0 +1,19 @@
+<head>
+  <title>g1-agencias</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<h1>Agencias</h1>
+	{{#each agencias}}
+		<div>{{name}}</div>
+	{{/each}}
+
+	<h1>Terminais</h1>
+	{{#each terminais}}
+		<div>{{name}}</div>
+	{{/each}}
+</template>

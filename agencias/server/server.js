@@ -1,4 +1,3 @@
-console.log(process.env.MONGO_URL)
 Cluster.connect(process.env.MONGO_URL);
 Cluster.register("agencias");
 
@@ -13,4 +12,9 @@ Meteor.methods({
 		});
 		console.log('criando agencia');
 	}
+});
+
+
+Meteor.publish('agencias', function() {
+	return agencias.find();
 });

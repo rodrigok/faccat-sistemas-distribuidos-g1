@@ -1,8 +1,8 @@
-var agenciasConn = Cluster.discoverConnection('agencias');
-var agencias = new Meteor.Collection('agencias', agenciasConn);
+agenciasConn = Cluster.discoverConnection('agencias');
+agencias = new Meteor.Collection('agencias', agenciasConn);
 
-var terminaisConn = Cluster.discoverConnection('terminais');
-var terminais = new Meteor.Collection('terminais', terminaisConn);
+terminaisConn = Cluster.discoverConnection('terminais');
+terminais = new Meteor.Collection('terminais', terminaisConn);
 
 Template.hello.helpers({
 	agencias: function () {
